@@ -8,14 +8,14 @@ import java.util.Map;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 
-import br.com.programaestagio.Concedente;
+import br.com.programaestagio.EmpresaConcedente;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
 public class AcordoCooperacao {
 
-    public void gerar(Concedente concedente) throws Exception {
+    public void gerar(EmpresaConcedente concedente) throws Exception {
         // Carrega o template da pasta resources/template
         InputStream templateStream = getClass().getClassLoader().getResourceAsStream("template/acordo_template.docx");
         WordprocessingMLPackage template = WordprocessingMLPackage.load(templateStream);

@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ConcedenteDAO {
+public class EmpresaConcedenteDAO {
 
-    public void inserir(Concedente concedente) {
+    public void inserir(EmpresaConcedente concedente) {
         String sqlPessoa = "INSERT INTO pessoa (nome, logradouro, numero, bairro, municipio, uf, cep, telefone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         String sqlConcedente = "INSERT INTO concedente (id, cnpj) VALUES (?, ?)";
 
@@ -49,7 +49,7 @@ public class ConcedenteDAO {
         }
     }
 
-    List<Concedente> buscarPorCNPJ(String cnpjDigitado) {
+    List<EmpresaConcedente> buscarPorCNPJ(String cnpjDigitado) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

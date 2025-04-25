@@ -145,14 +145,14 @@ public class FrmConsConcedente extends javax.swing.JFrame {
         
     private void buscarConcedente() {
         String cnpjDigitado = txtCnpj.getText();
-        ConcedenteDAO dao = new ConcedenteDAO();
-        List<Concedente> lista = dao.buscarPorCNPJ(cnpjDigitado);
+        EmpresaConcedenteDAO dao = new EmpresaConcedenteDAO();
+        List<EmpresaConcedente> lista = dao.buscarPorCNPJ(cnpjDigitado);
 
         DefaultTableModel modelo = new DefaultTableModel(
             new String[]{"Razão Social", "CNPJ", "Município", "UF"}, 0
         );
 
-        for (Concedente c : lista) {
+        for (EmpresaConcedente c : lista) {
             modelo.addRow(new Object[]{
                 c.getRazaoSocial(),
                 c.getCnpj(),
